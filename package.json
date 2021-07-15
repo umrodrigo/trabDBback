@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
     "build": "npx tsc",
+    "start": "node dist/server.js",
     "postbuild": "npm run migration:prod",
     "migration": "ts-node-dev --transpile-only node_modules/typeorm/cli.js migration:run",
     "migration:revert": "ts-node-dev --transpile-only node_modules/typeorm/cli.js migration:revert",
@@ -22,6 +23,7 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "pg": "^8.6.0",

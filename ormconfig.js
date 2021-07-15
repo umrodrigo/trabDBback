@@ -20,10 +20,10 @@ module.exports = {
         }
     },
     migrations: [
-        'src/core/data/database/migrations/**/*'
+        `${rootPath}/core/data/database/migrations/**/*`
     ],
     entities: [
-        `${rootPath}src/core/data/database/entities/**/*`
+        `${rootPath}/core/data/database/entities/**/*`
     ],
     cli: {
         entitiesDir: 'src/core/data/database/entities',
