@@ -11,7 +11,7 @@
     "migration": "ts-node-dev --transpile-only node_modules/typeorm/cli.js migration:run",
     "migration:revert": "ts-node-dev --transpile-only node_modules/typeorm/cli.js migration:revert",
     "migration:run": "ts-node-dev --transpile-only node_modules/typeorm/cli.js migration:run",
-    "migration:prod": "NODE_ENV=production npx typeorm migration:run"
+    "migration:prod": "cross-env NODE_ENV=production npx typeorm migration:run"
   },
   "devDependencies": {
     "@types/cors": "^2.8.10",
