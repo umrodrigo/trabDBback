@@ -5,9 +5,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "build": "tsc",
+    "build": "npx tsc",
     "start": "node ./dist/server.js",
-    "postbuild": "run migration:prod",
+    "postbuild": "npx run migration:prod",
     "migration": "ts-node-dev --transpile-only node_modules/typeorm/cli.js migration:run",
     "migration:revert": "ts-node-dev --transpile-only node_modules/typeorm/cli.js migration:revert",
     "migration:run": "ts-node-dev --transpile-only node_modules/typeorm/cli.js migration:run",
