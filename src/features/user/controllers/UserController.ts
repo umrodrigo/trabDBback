@@ -5,7 +5,6 @@ export default class UserController {
     // Criar novo Usuário
     public async store(req: Request, res: Response) {
         const { username, password } = req.body;
-        //validar os compos obrigatorios pelo middleware        
         try {
             const user = await new User(username, password).save();
             return res.status(201).json(user);
