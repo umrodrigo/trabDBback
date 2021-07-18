@@ -1,8 +1,9 @@
 import { Request, Response, NextFunction } from "express";
 import { User } from "../../../core/data/database/entities/User";
+import { UserTip } from "../models/userModel";
 
 export default async function userCheck(req: Request, res: Response, next: NextFunction) {
-    const { username }  = req.body;    
+    const { username }: UserTip  = req.body;    
     let userExist = await User.findOne({
       where: {
         username: username,

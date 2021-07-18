@@ -69,13 +69,13 @@ export default class RecadoController {
             return res.status(404).json({
                 msg: 'Usuário não encontrado',
             });
-        };
-        //const recadosUsuario = await Recado.find((a) => a.userID === userID)
+        };        
         const recadosUsuario = await Recado.find({
             where: {
                 userID: userID,
             },
         });
+        console.log(recadosUsuario);
         return res.json(recadosUsuario);
     }
 }
